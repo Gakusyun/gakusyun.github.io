@@ -1,38 +1,63 @@
-a{
-    color: black;
-    font-style: italic;
-    font-family: 'Times New Roman', Times, serif;
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
 }
-.name-card{
-    width: 350px;
-    height: 265px;
-    background-color: #f4f4f4;
+
+body {
+    background-color: #f9f9fb;
+}
+
+.profile-pic {
+    height: 50%;
+    background-color: #fff;
     border-radius: 20px;
     display: block;
     float: left;
 }
-.name-card:hover{
-    box-shadow: 0px 15px 30px -12px black;
-    background-color: #f5f5f5;
-    transition: 0.3s
+
+.jp {
+    font-family: 'MS Gothic', 'HiraKakuProN-W3', 'Hiragino Kaku Gothic Pro', sans-serif;
 }
-.name-card .profile-pic{
-    margin: 20px;
+a {
+    color: black;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* .main-area{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+} */
+.name-card {
+    margin: 0 auto;
+    width: 95%;
+    height: 265px;
+    background-color: #d7d7d7;
+    box-shadow: 0px 15px 30px -12px black;
+    border-radius: 20px;
+    display: block;
+}
+.name-card .profile-pic {
+    margin: 5%;
     margin-bottom: 10px;
 }
-.name-card .name{
-    margin-top: 10px;
+
+.name-card .name {
+    margin-top: 5%;
     display: block;
     float: left;
     font-size: 60px;
     font-weight: lighter;
     color: black
 }
-.add{
+
+.add {
     font-size: 10px;
     color: gray;
 }
-.add-n{
+
+.add-n {
     display: block;
     float: left;
     color: gray;
@@ -44,17 +69,19 @@ a{
 }
 
 
-.name-card .mail{
+.name-card .mail {
     display: block;
     float: left;
 
 }
-.name-card .mail a{
+
+.name-card .mail a {
     color: black;
     font-style: italic;
     font-family: 'Times New Roman', Times, serif;
 }
-.name-card .introduce{
+
+.name-card .introduce {
     margin-left: 25px;
     margin-right: 25px;
     width: 350px;
