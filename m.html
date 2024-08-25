@@ -6,23 +6,22 @@
     <title>Gakusyun</title>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/m.css">
     <script>
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
         if (isMobile) {
-            window.location.href = "/m";
+            window.location.href = "/";
         }
     </script>
 </head>
 <body>
-    <div class="main-area">
-        <h1>欢迎来到 <a href="javascript:showNameCard()">Gaoxj</a> 的主页</h1>
+    <h1>欢迎来到 <a href="javascript:showNameCard()">Gaoxj</a> 的主页</h1>
         <div class="name-card" id="name-card">
             <img src="./img/bujishibou.png" alt="头像" class="profile-pic">
             <script>
                 var isNameCardShow = false;
-                $("#name-card").hide()
+                // $("#name-card").hide()
                 function showNameCard() {
                     if (isNameCardShow) {
                         isNameCardShow = false;
@@ -55,6 +54,5 @@
             <div class="introduce">汉语<span class="add">（普通话、西南官话）</span>/English/<span class="jp">日本語</span><br />
                 CJT-4/全国无偿献血奉献奖铜奖<span class="add"></span>/</div>
         </div>
-    </div>
 </body>
 </html>
