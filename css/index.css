@@ -1,0 +1,63 @@
+.main-area{
+    width: 1200px;
+    margin: 50px auto;
+    display: block;
+
+}
+.name-card{
+    width: 400px;
+    height: 300px;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    display: block;
+    float: left;
+}
+.name-card:hover{
+    box-shadow: 0px 15px 30px -12px black;
+    background-color: #f5f5f5;
+    transition: 0.3s
+}
+.name-card .profile-pic{
+    margin: 25px;
+    margin-bottom: 10px;
+}
+.name-card .name{
+    margin-top: 10px;
+    display: block;
+    float: left;
+    font-size: 72px;
+    font-weight: lighter;
+    color: black
+}
+.add{
+    font-size: 14px;
+    color: gray;
+}
+.add-n{
+    display: block;
+    float: left;
+    color: gray;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: -18px;
+    margin-left: 24px;
+    margin-bottom: 12px;
+}
+
+
+.name-card .mail{
+    display: block;
+    float: left;
+
+}
+.name-card .mail a{
+    color: black;
+}
+.name-card .introduce{
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 350px;
+    display: block;
+    float: left;
+    font-size: 22px;
+}
