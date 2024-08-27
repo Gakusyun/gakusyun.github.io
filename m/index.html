@@ -17,7 +17,7 @@
 <body>
     <h1>欢迎来到 <a href="javascript:showNameCard()">Gaoxj</a> 的主页</h1>
         <div class="name-card" id="name-card">
-            <img src="./img/bujishibou.png" alt="头像" class="profile-pic" id="pp" name="overdose">
+            <img src="../img/bujishibou.png" alt="头像" class="profile-pic" id="pp" name="overdose">
             <script>
                 var isNameCardShow = false;
                 $("#name-card").hide()
@@ -33,11 +33,11 @@
 
                 var temp = Math.random() * 3;
                 if (temp <= 1) {
-                    $("#pp").attr("src", "./img/bujishibou.png").attr("name", "overdose")
+                    $("#pp").attr("src", "../img/bujishibou.png").attr("name", "overdose")
                 }else if (temp > 1 && temp <= 2) {
-                    $("#pp").attr("src", "./img/ao.jpg").attr("name", "koisuru")
+                    $("#pp").attr("src", "../img/ao.jpg").attr("name", "koisuru")
                 }else{
-                    $("#pp").attr("src", "./img/aotomira.jpg").attr("name", "koisuru")
+                    $("#pp").attr("src", "../img/aotomira.jpg").attr("name", "koisuru")
                 }
                 $("#pp").click(function () {
                     if (this.getAttribute("name") == "overdose") {
