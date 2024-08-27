@@ -1,11 +1,13 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: sans-serif;
 }
-body{
+
+body {
     background-color: #f9f9fb;
 }
+
 .profile-pic {
     height: 150px;
     width: 150px;
@@ -14,20 +16,24 @@ body{
     display: block;
     float: left;
 }
-.jp{
-    font-family: 'MS Gothic','HiraKakuProN-W3','Hiragino Kaku Gothic Pro',sans-serif;
+
+.jp {
+    font-family: 'MS Gothic', 'HiraKakuProN-W3', 'Hiragino Kaku Gothic Pro', sans-serif;
 }
-.main-area{
+
+.main-area {
     width: 1200px;
     margin: 50px auto;
     display: block;
 }
-a{
+
+a {
     color: black;
     font-style: italic;
     font-family: 'Times New Roman', Times, serif;
 }
-.name-card{
+
+.name-card {
     margin-top: 5px;
     width: 400px;
     height: 300px;
@@ -36,16 +42,19 @@ a{
     display: block;
     float: left;
 }
-.name-card:hover{
+
+.name-card:hover {
     box-shadow: 0px 15px 30px -12px black;
     background-color: #f5f5f5;
     transition: 0.3s
 }
-.name-card .profile-pic{
+
+.name-card .profile-pic {
     margin: 25px;
     margin-bottom: 10px;
 }
-.name-card .name{
+
+.name-card .name {
     margin-top: 10px;
     display: block;
     float: left;
@@ -53,11 +62,13 @@ a{
     font-weight: lighter;
     color: black
 }
-.add{
+
+.add {
     font-size: 14px;
     color: gray;
 }
-.add-n{
+
+.add-n {
     display: block;
     float: left;
     color: gray;
@@ -69,21 +80,29 @@ a{
 }
 
 
-.name-card .mail{
+.name-card .mail {
     display: block;
     float: left;
 
 }
-.name-card .mail a{
+
+.name-card .mail a {
     color: black;
     font-style: italic;
     font-family: 'Times New Roman', Times, serif;
 }
-.name-card .introduce{
+
+.name-card .introduce {
     margin-left: 25px;
     margin-right: 25px;
     width: 350px;
     display: block;
     float: left;
     font-size: 22px;
+}
+
+.text-area {
+    width: 100%;
+    display: block;
+    float: left;
 }

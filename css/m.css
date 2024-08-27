@@ -19,11 +19,13 @@ body {
 .jp {
     font-family: 'MS Gothic', 'HiraKakuProN-W3', 'Hiragino Kaku Gothic Pro', sans-serif;
 }
+
 a {
     color: black;
     font-style: italic;
     font-family: 'Times New Roman', Times, serif;
 }
+
 /* .main-area{
     display: block;
     margin: 0 auto;
@@ -38,6 +40,7 @@ a {
     border-radius: 20px;
     display: block;
 }
+
 .name-card .profile-pic {
     margin: 5%;
     margin-bottom: 10px;
@@ -88,4 +91,10 @@ a {
     display: block;
     float: left;
     font-size: 20px;
+}
+
+.text-area {
+    width: 100%;
+    display: block;
+    float: left;
 }
