@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="cn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
         }
     </script>
 </head>
+
 <body>
     <div class="main-area">
         <h1>欢迎来到 <a href="javascript:showNameCard()">Gaoxj</a> 的主页</h1>
@@ -27,7 +29,7 @@
                     if (isNameCardShow) {
                         isNameCardShow = false;
                         $("#name-card").fadeOut(200)
-                    }else{
+                    } else {
                         isNameCardShow = true;
                         $("#name-card").fadeIn(200)
                     }
@@ -36,9 +38,9 @@
                 var temp = Math.random() * 3;
                 if (temp <= 1) {
                     $("#pp").attr("src", "./img/bujishibou.png").attr("name", "overdose")
-                }else if (temp > 1 && temp <= 2) {
+                } else if (temp > 1 && temp <= 2) {
                     $("#pp").attr("src", "./img/ao.jpg").attr("name", "koisuru")
-                }else{
+                } else {
                     $("#pp").attr("src", "./img/aotomira.jpg").attr("name", "koisuru")
                 }
                 $("#pp").click(function () {
@@ -60,8 +62,14 @@
                 <a href="https://gakusyun.github.io/">gaoxj.top</a>
             </div>
             <div class="introduce">汉语<span class="add">（普通话、西南官话）</span>/English/<span class="jp">日本語</span><br />
-                <a href="/cjt4">CJT-4</a>/全国无偿献血奉献奖铜奖<span class="add"></span>/</div>
+                <a href="/cjt4">CJT-4</a>/全国无偿献血奉献奖铜奖<span class="add"></span>/<br /><a
+                    href="https://github.com/gakusyun">GitHub</a>&nbsp;&nbsp;&nbsp;<a
+                    href="https://gitee.com/gakusyun">Gitee</a>&nbsp;&nbsp;&nbsp;<a
+                    href="https://gitcode.com/gakusyun">GitCode</a>&nbsp;&nbsp;&nbsp;<a
+                    href="https://space.bilibili.com/23946621">bilibili</a>
+            </div>
         </div>
     </div>
 </body>
+
 </html>

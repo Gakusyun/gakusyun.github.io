@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="cn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,51 +15,58 @@
         }
     </script>
 </head>
+
 <body>
     <h1>欢迎来到 <a href="javascript:showNameCard()">Gaoxj</a> 的主页</h1>
-        <div class="name-card" id="name-card">
-            <img src="../img/bujishibou.png" alt="头像" class="profile-pic" id="pp" name="overdose">
-            <script>
-                var isNameCardShow = false;
-                $("#name-card").hide()
-                function showNameCard() {
-                    if (isNameCardShow) {
-                        isNameCardShow = false;
-                        $("#name-card").fadeOut(200)
-                    }else{
-                        isNameCardShow = true;
-                        $("#name-card").fadeIn(200)
-                    }
+    <div class="name-card" id="name-card">
+        <img src="../img/bujishibou.png" alt="头像" class="profile-pic" id="pp" name="overdose">
+        <script>
+            var isNameCardShow = false;
+            $("#name-card").hide()
+            function showNameCard() {
+                if (isNameCardShow) {
+                    isNameCardShow = false;
+                    $("#name-card").fadeOut(200)
+                } else {
+                    isNameCardShow = true;
+                    $("#name-card").fadeIn(200)
                 }
+            }
 
-                var temp = Math.random() * 3;
-                if (temp <= 1) {
-                    $("#pp").attr("src", "../img/bujishibou.png").attr("name", "overdose")
-                }else if (temp > 1 && temp <= 2) {
-                    $("#pp").attr("src", "../img/ao.jpg").attr("name", "koisuru")
-                }else{
-                    $("#pp").attr("src", "../img/aotomira.jpg").attr("name", "koisuru")
+            var temp = Math.random() * 3;
+            if (temp <= 1) {
+                $("#pp").attr("src", "../img/bujishibou.png").attr("name", "overdose")
+            } else if (temp > 1 && temp <= 2) {
+                $("#pp").attr("src", "../img/ao.jpg").attr("name", "koisuru")
+            } else {
+                $("#pp").attr("src", "../img/aotomira.jpg").attr("name", "koisuru")
+            }
+            $("#pp").click(function () {
+                if (this.getAttribute("name") == "overdose") {
+                    window.location.href = "/pp/overdose";
+                } else if (this.getAttribute("name") == "koisuru") {
+                    window.location.href = "/pp/koisuru";
                 }
-                $("#pp").click(function () {
-                    if (this.getAttribute("name") == "overdose") {
-                        window.location.href = "/pp/overdose";
-                    } else if (this.getAttribute("name") == "koisuru") {
-                        window.location.href = "/pp/koisuru";
-                    }
-                })
-            </script>
-            <div class="name">Gaoxj</div>
-            <div class="add-n">a.k.a Gakusyun</div>
-            <div class="mail">
-                邮箱:
-                <a href="mailto:gaoxj@gaoxj.top">Gaoxj@gaoxj.top</a>
-            </div>
-            <div class="mail">
-                个人主页:&nbsp;&nbsp;
-                <a href="https://gakusyun.github.io/">gaoxj.top</a>
-            </div>
-            <div class="introduce">汉语<span class="add">（普通话、西南官话）</span>/English/<span class="jp">日本語</span><br />
-                <a href="/m/cjt4">CJT-4</a>/全国无偿献血奉献奖铜奖<span class="add"></span>/</div>
+            })
+        </script>
+        <div class="name">Gaoxj</div>
+        <div class="add-n">a.k.a Gakusyun</div>
+        <div class="mail">
+            邮箱:
+            <a href="mailto:gaoxj@gaoxj.top">Gaoxj@gaoxj.top</a>
         </div>
+        <div class="mail">
+            个人主页:&nbsp;&nbsp;
+            <a href="https://gakusyun.github.io/">gaoxj.top</a>
+        </div>
+        <div class="introduce">汉语<span class="add">（普通话、西南官话）</span>/English/<span class="jp">日本語</span><br />
+            <a href="/m/cjt4">CJT-4</a>/全国无偿献血奉献奖铜奖<span class="add"></span>/<br /><a
+                href="https://github.com/gakusyun">GitHub</a>&nbsp;&nbsp;&nbsp;<a
+                href="https://gitee.com/gakusyun">Gitee</a>&nbsp;&nbsp;&nbsp;<a
+                href="https://gitcode.com/gakusyun">GitCode</a>&nbsp;&nbsp;&nbsp;<a
+                href="https://space.bilibili.com/23946621">bilibili</a>
+        </div>
+    </div>
 </body>
+
 </html>
