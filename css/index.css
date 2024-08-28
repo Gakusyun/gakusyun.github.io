@@ -106,3 +106,26 @@ a {
     display: block;
     float: left;
 }
+
+.text-area .project-list {
+    width: 100%;
+    display: block;
+    float: left;
+}
+
+.text-area .project-list a {
+    background-color: #f4f4f4;
+    display: block;
+    float: left;
+    width: 524px;
+    margin-top: 20px;
+    font-size: 24px;
+    margin-left: 25px;
+    margin-right: 25px;
+    border-radius: 10px;
+    height: 100px;
+    padding: 1%;
+    border: #f4f4f4 1px solid;
+
+    
+}
