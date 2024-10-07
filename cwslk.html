@@ -88,12 +88,14 @@
         <li>编译环境：</li>
         <ul>
             <li>我们使用WSL中的Ubuntu发行版</li>
-            <li>使用命令<code>sudo apt install build-essential flex bison dwarves libssl-dev libelf-dev cpi</code>安装编译所需依赖
+            <img src="
+            https://oss.gaoxj.top/img/co1.jpg" style="width: 500px;" />
+            <li>使用命令<code>sudo apt install build-essential flex bison dwarves libssl-dev libelf-dev cpio</code>安装编译所需依赖
             </li>
         </ul>
         <li>下载内核源码</li>
         <ul>
-            <li>在<a href="https://github.com/microsoft/WSL2-Linux-Kernel"
+            <li>在<a href="https://github.com/microsoft/WSL2-Linux-Kernel/releases/latest"
                     target="_blank">此处</a>下载，建议下载releases中的压缩包，使用<code>git clone</code>命令太慢
             </li>
             <li>解压到任意目录</li>
@@ -101,12 +103,22 @@
         </ul>
         <li>编译内核</li>
         <ul>
-            <li>使用命令<code>make menuconfig KCONFIG_CONFIG=Microsoft/config-wsl</code>开始编译<ul>
-                    <li>或者使用<code>make menuconfig KCONFIG_CONFIG=Microsoft/config-wsl -j8</code>调用多线程加速编译</li>
+            <li>使用命令<code>make KCONFIG_CONFIG=Microsoft/config-wsl</code>开始编译<ul>
+                    <li>或者使用<code>make KCONFIG_CONFIG=Microsoft/config-wsl -j8</code>调用多线程加速编译</li>
                 </ul>
             </li>
         </ul>
     </ul>
+    <p>Mitigations for CPU vulnerabilities (CPU_MITIGATIONS) [Y/n/?] (NEW)选Y</p>
+    <p>Analog Devices Generic AXI ADC IP core driver (ADI_AXI_ADC) [N/m/?] (NEW)选n</p>
+    <p>编译中：</p>
+    <img src="
+    https://oss.gaoxj.top/img/co2.jpg" style="width: 500px;" />
+    <p>编译完成后没有提示</p>
+    <img src="
+    https://oss.gaoxj.top/img/co3.jpg" style="width: 500px;" />
+    <p>编译完成后的文件在arch/x86_64/boot下，文件名为bzImage。</p>
+    <p>可以用命令<code>mv arch/x86_64/boot/bzImage mnt/c/kernel</code>把编译完的内核文件移动到C盘根目录下。</p>
     <a href="/">返回</a>
     <a href="https://beian.miit.gov.cn/">鄂ICP备2024069158号-2</a>
 </body>
