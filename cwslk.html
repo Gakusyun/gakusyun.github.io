@@ -123,9 +123,9 @@
     <a href="https://beian.miit.gov.cn/">鄂ICP备2024069158号-2</a>
     <script>
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        // 如果是移动端，则将图片的宽度调整为250px
+        // 如果是移动端，则将图片的宽度调整为屏幕的宽度
         if (isMobile) {
-            $("img").css("width", "250px");
+            $("img").css("width", window.innerWidth);
         }
     </script>
 </body>
