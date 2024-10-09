@@ -20,7 +20,8 @@
     <div class="main-area">
         <h1>欢迎来到 <a href="javascript:showNameCard()">Gaoxj</a> 的主页</h1>
         <div class="name-card" id="name-card">
-            <img src="https://oss.gaoxj.top/img/bujishibou.png" alt="头像" class="profile-pic" id="pp" name="overdose">
+            <img src="https://oss.gaoxj.top/img/bujishibou.png-towebp" alt="头像" class="profile-pic" id="pp"
+                name="overdose">
             <script>
                 var isNameCardShow = false;
 
@@ -37,11 +38,11 @@
 
                 var temp = Math.random() * 3;
                 if (temp <= 1) {
-                    $("#pp").attr("src", "https://oss.gaoxj.top/img/bujishibou.png").attr("name", "overdose")
+                    $("#pp").attr("src", "https://oss.gaoxj.top/img/bujishibou.png-towebp").attr("name", "overdose")
                 } else if (temp > 1 && temp <= 2) {
-                    $("#pp").attr("src", "https://oss.gaoxj.top/img/ao.jpg").attr("name", "koisuru")
+                    $("#pp").attr("src", "https://oss.gaoxj.top/img/ao.jpg-towebp").attr("name", "koisuru")
                 } else {
-                    $("#pp").attr("src", "https://oss.gaoxj.top/img/aotomira.jpg").attr("name", "koisuru")
+                    $("#pp").attr("src", "https://oss.gaoxj.top/img/aotomira.jpg-towebp").attr("name", "koisuru")
                 }
                 $("#pp").click(function () {
                     if (this.getAttribute("name") == "overdose") {
