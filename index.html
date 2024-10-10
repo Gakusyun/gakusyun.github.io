@@ -72,6 +72,7 @@
         </div>
         <div class="text-area">
             <div class="project-list">
+                <a href="#" id="count"></a>
                 <a href="https://gitee.com/Gakusyun/iwiotss-website">Iwiotss-website</a>
                 <a href="https://gitee.com/Gakusyun/iwiotss-core">Iwiotss-core</a>
                 <a href="https://github.com/Gakusyun/ADBtoolbox">ADBtoolbox</a>
@@ -80,6 +81,17 @@
                 <a href="/cwslk">编译WSL2内核</a>
                 <a href="https://beian.miit.gov.cn/">鄂ICP备2024069158号-2</a>
             </div>
+            <script>
+                var count = localStorage.getItem("count");
+                if (count == null) {
+                    count = 1;
+                    localStorage.setItem("count", count);
+                } else {
+                    count = parseInt(count) + 1;
+                    localStorage.setItem("count", count);
+                }
+                $("#count").text("你是第: " + count);
+            </script>
         </div>
     </div>
 </body>
