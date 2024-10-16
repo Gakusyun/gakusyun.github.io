@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>检查你是否还活着</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            color-scheme: light dark;
+        }
+
+        body {
+            width: 35em;
+            margin: 0 auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    <p>点击下方按钮，检查你是否还活着。</p>
+    <button>点我</button>
+    <p id="live">恭喜你！你还活着</p>
+    <script>
+        $("#live").hide();
+        $("button").click(function () {
+            $("#live").show();
+        });
+    </script>
+</body>
+
+</html>
