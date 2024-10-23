@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SessionStorage文档</title>
+</head>
+
+<body>
+    <h3>Session计数器</h3>
+
+    <div id="content"></div>
+    <p>
+        <hr />
+        <script language="javascript">
+            if (!sessionStorage["counter"]) {
+                sessionStorage["counter"] = 0;
+            }
+            else {
+                sessionStorage["counter"]++;
+            }
+            document.querySelector("#content").innerHTML = "刷新次数  " + sessionStorage.getItem("counter");
+        </script>
+    </p>
+</body>
+
+</html>

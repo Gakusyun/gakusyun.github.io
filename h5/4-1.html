@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Storage示例</title>
+    <script>
+        function saveStorage(id) {
+            var key = document.getElementById("key").value;
+            var value = document.getElementById("value").value;
+            //var str = target.value;
+            localStorage.setItem(key, value);
+        }
+        function loadStorage(id) {
+            var target = document.getElementById(id);
+            var result = "";
+
+            for (var i = 0; i < localStorage.length; i++) {
+                var tempId = localStorage.key(i);
+                var name = localStorage.getItem(tempId);
+                result += tempId + "  " + name + "<br/>";
+            }
+            target.innerHTML = result;
+        }
+        function clearStorage(id) {
+            localStorage.clear()
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Web Storage 示例</h1>
+    <input type="button" value="保存数据" onclick="saveStorage('input');">
+    <input type="button" value="读取数据" onclick="loadStorage('msg');">
+    <input type="button" value="清除数据" onclick="clearStorage('msg');">
+    <hr />
+    Key:<input type="text" id="key">
+    value:<input type="text" id="value">
+    <hr />
+    <div id="msg"></div>
+</body>
+
+</html>

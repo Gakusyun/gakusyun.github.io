@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>音乐播放器</title>
+</head>
+
+<body>
+
+    <audio id="myMusic" controls>
+        <source src="https://oss.gaoxj.top/Heart.mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 元素。
+    </audio>
+
+    <div id="audioControls">
+        <button onclick="playMusic()">播放音乐</button>
+        <button onclick="pauseMusic()">暂停音乐</button>
+        <button onclick="stopMusic()">停止音乐</button>
+    </div>
+
+
+    <script>
+
+        function playMusic() {
+            myAudio.play();
+        }
+
+        function pauseMusic() {
+            myAudio.pause();
+        }
+
+        function stopMusic() {
+            myAudio.pause();
+            myAudio.currentTime = 0;
+            progressBar.style.width = '0%';
+            currentTimeDisplay.textContent = '00:00';
+        }  
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>问卷调查</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f9;
+            font-family: 'Arial', sans-serif;
+        }
+
+        form {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 20px 0;
+        }
+
+        label {
+            display: inline-block;
+            min-width: 50px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        select {
+            width: calc(100% - 160px);
+            padding: 8px;
+            margin-left: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form1" name="investigation" action="#" method="post">
+        <h1>问卷调查</h1>
+        <ul>
+            <li>
+                <label for="name">你的姓名：</label>
+                <input type="text" id="name" name="name" />
+            </li>
+            <li>
+                <label for="sex">性别：</label>
+                <input type="radio" id="male" name="sex" value="男" />
+                <label for="male">男</label>
+                <input type="radio" id="female" name="sex" value="女" />
+                <label for="female">女</label>
+            </li>
+            <li>
+                <label for="interests">兴趣爱好：</label>
+                <input type="checkbox" id="reading" name="interests" value="读书" />
+                <label for="reading">读书</label>
+                <input type="checkbox" id="singing" name="interests" value="唱歌" />
+                <label for="singing">唱歌</label>
+                <input type="checkbox" id="basketball" name="interests" value="篮球" />
+                <label for="basketball">篮球</label>
+                <input type="checkbox" id="swimming" name="interests" value="游泳" />
+                <label for="swimming">游泳</label>
+                <input type="checkbox" id="running" name="interests" value="跑步" />
+                <label for="running">跑步</label>
+            </li>
+            <li>
+                <label for="grade">年级：</label>
+                <select id="grade" name="grade">
+                    <option value="大一">大一</option>
+                    <option value="大二">大二</option>
+                    <option value="大三">大三</option>
+                    <option value="大四">大四</option>
+                </select>
+            </li>
+            <li>
+                <label>1.在校期间的平均消费</label>
+                <br>
+                <input type="radio" name="1" />600-1000
+                <input type="radio" name="1" />1000-1500
+                <input type="radio" name="1" />1500-2000
+                <input type="radio" name="1" />2000以上
+            </li>
+            <li>
+                <label>2.生活费来源</label>
+                <br>
+                <input type="radio" name="2" />全部来自家庭
+                <input type="radio" name="2" />部分来自家庭
+                <input type="radio" name="2" />全部来自自己
+            </li>
+            <li>
+                <label>3.每月用于校内食堂就餐的费用约为</label>
+                <br>
+                <input type="radio" name="3" />300以下
+                <input type="radio" name="3" />300-600
+                <input type="radio" name="3" />600-1000
+                <input type="radio" name="3" />1000以上
+            </li>
+            <li>
+                <label>4.每月用于零食及校外饮食的费用</label>
+                <br>
+                <input type="radio" name="4" />无
+                <input type="radio" name="4" />1-200
+                <input type="radio" name="4" />200-500
+                <input type="radio" name="4" />500以上
+            </li>
+            <li>
+                <label>5.购物的方式通常为</label>
+                <br>
+                <input type="radio" name="1" />实体店
+                <input type="radio" name="1" />网购
+            </li>
+            <input type="submit" style="margin-top: 20px;" />
+        </ul>
+    </form>
+</body>
+
+</html>

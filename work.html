@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Workers</title>
+    <script>
+        var worker;
+        function startWorker() {
+            worker = new Worker("./js/works.js");
+            worker.onmessage = function (e) {
+                document.getElementById("result").innerHTML = e.data;
+            }
+        }
+        function stopWorker() {
+            worker.terminate();
+        }
+    </script>
+</head>
+
+<body>
+    <p>计算结果:
+    <div id="result"></div>
+    </p>
+    <button onclick="startWorker()">开始计算</button>
+    <button onclick="stopWorker()">停止计算</button>
+</body>
+
+</html>

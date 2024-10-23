@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模拟退火</title>
+</head>
+
+<body>
+    <h1>模拟退火</h1>
+    <button onclick="startSimulation()">开始模拟</button>
+    <p id="result"></p>
+
+    <script>
+        function startSimulation() {
+            const initialState = [5, 5, 5]; // 初始状态，可以根据需要调整  
+            const coolingRate = 0.99; // 冷却率  
+            const stopTemperature = 0.01; // 停止温度  
+            const iterationCount = 10000; // 最大迭代次数  
+
+            const worker = new Worker('worker.js');
+
+            worker.onmessage = function (event) {
+                const { bestState, bestEnergy } = event.data;
+                document.getElementById('result').textContent = `最佳状态: ${bestState.join(', ')}, Best Energy: ${bestEnergy}`;
+                worker.terminate(); // 不再需要Worker时终止它  
+            };
+
+            worker.onerror = function (error) {
+                console.error('Worker error:', error);
+            };
+
+            worker.postMessage({ initialState, coolingRate, stopTemperature, iterationCount });
+        }  
+    </script>
+</body>
+
+</html>

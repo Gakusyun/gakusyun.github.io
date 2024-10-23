@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web SQL Demo</title>
+    <script type="text/javascript">
+        // 页面加载完成后执行  
+        window.onload = function () {
+            // 1. 查询或创建一个web数据库  
+            var db = openDatabase('mywebdbs', '1.0', 'Test DB', 1 * 1024 * 1024);
+
+            // 2. 使用transaction对数据库db进行操作，创建表并插入数据  
+            db.transaction(function (dbtest) {
+                // 创建表CHART2（如果不存在）  
+                dbtest.executeSql('CREATE TABLE IF NOT EXISTS CHART2 (id UNIQUE, log)');
+
+                // 插入数据到CHART2表中  
+                dbtest.executeSql('INSERT INTO CHART2 (id, log) VALUES (1, "hello world")');
+                dbtest.executeSql('INSERT INTO CHART2 (id, log) VALUES (2, "my name is jack")');
+            });
+
+            // 获取页面上的按钮元素  
+            var readButton = document.getElementById('readButton');
+
+            // 为按钮添加点击事件监听器  
+            readButton.addEventListener('click', function () {
+                // 3. 使用transaction对数据库db进行操作，查询数据  
+                db.transaction(function (dbtest) {
+                    // 查询CHART2表中的所有数据  
+                    dbtest.executeSql('SELECT * FROM CHART2', [], function (dbtest, results) {
+                        // 获取页面上的显示区域元素  
+                        var displayArea = document.getElementById('displayArea');
+
+                        // 清空之前的显示内容  
+                        displayArea.innerHTML = '';
+
+                        // 遍历查询结果并显示在页面上  
+                        for (var i = 0; i < results.rows.length; i++) {
+                            var row = results.rows.item(i);
+                            var p = document.createElement('p');
+                            p.textContent = 'id: ' + row.id + ' -- log: ' + row.log;
+                            displayArea.appendChild(p);
+                        }
+                    }, null);
+                });
+            });
+        };  
+    </script>
+</head>
+
+<body>
+    <h1>Web SQL Demo</h1>
+    <button id="readButton">Read Data from Database</button>
+    <div id="displayArea"></div>
+</body>
+
+</html>
